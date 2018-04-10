@@ -1,0 +1,81 @@
+<!-- <form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  <div class="form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form> -->
+
+<div class="row">
+  <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+
+    <!-- <form (ngSubmit)="onSubmitLogin(loginForm)" #loginForm="ngForm"> -->
+    <form #loginForm="ngForm">
+      <div class="form-group" [class.has-error]="email.errors && email.touched">
+        <div class="input-group">
+          <span class="input-group-addon">
+            <i class="fa fa-user"></i>
+          </span>
+          <input type="text" name="email" class="form-control" placeholder="Email" [(ngModel)]="user.email" #email="ngModel" required
+            email>
+        </div>
+        <label class="control-label" *ngIf="email.errors && email.touched">
+          <ul>
+            <li *ngIf="email.errors.required">Required</li>
+            <li *ngIf="email.errors.email">Invalid email format</li>
+          </ul>
+        </label>
+      </div>
+
+      <div class="form-group" [class.has-error]="password.errors && password.touched">
+        <div class="input-group">
+          <span class="input-group-addon">
+            <i class="fa fa-lock"></i>
+          </span>
+          <input type="password" name="password" class="form-control" placeholder="Password" [(ngModel)]="user.password" #password="ngModel"
+            required>
+        </div>
+        <label class="control-label" *ngIf="password.errors && password.touched">
+          <ul>
+            <li *ngIf="password.errors.required">Required</li>
+          </ul>
+        </label>
+      </div>
+
+      <div class="form-group" class="has-error" *ngIf="apiError">
+        <label class="control-label">
+          {{ apiError }}
+        </label>
+      </div>
+
+      <div *ngIf="!signup" class="form-actions">
+        <button type="submit" (click)="onSubmitLogin(loginForm)" class="btn btn-block btn-primary" [disabled]="!loginForm.valid">
+          Login
+        </button>
+      </div>
+      <div *ngIf="signup" class="form-actions">
+        <button type="submit" (click)="onSubmitSignup(loginForm)" class="btn btn-block btn-primary" [disabled]="!loginForm.valid">
+          Signup
+        </button>
+      </div>
+    </form>
+  </div>
+  <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+    <hr>
+    <div class="panel panel-default">
+      <div class="panel-heading text-center">
+        Dont't have an account?
+        <a href="#" (click)="changeToSignup()">Sign up </a>
+      </div>
+    </div>
+  </div>
+</div>
