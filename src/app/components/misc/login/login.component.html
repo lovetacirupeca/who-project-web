@@ -15,8 +15,6 @@
       </div>
       <div class="form-group" [class.has-error]="password.errors && password.touched">
         <div class="input-group">
-          <span class="input-group-addon">
-          </span>
           <input type="password" name="password" class="form-control" placeholder="Password" [(ngModel)]="user.password" #password="ngModel"
             required>
         </div>
@@ -37,20 +35,20 @@
         </button>
       </div>
       <div *ngIf="signup" class="form-actions">
-        <button type="submit" (click)="onSubmitSignup(signupForm)" class="btn btn-block btn-primary" [disabled]="!signupForm.valid">
-           Sign up
+        <button type="submit" (click)="onSubmitSignup(loginForm)" class="btn btn-block btn-primary" [disabled]="!loginForm.valid">
+          Sign up
         </button>
       </div>
     </form>
   </div>
   <div class="col-xs-12 col-sm-12 col-sm-offset-12 message">
-      <div *ngIf="!signup" class="text-center">
-        Don't have an account?
-        <a href="#" (click)="changeToSignup()">Sign up</a>
-      </div>
-      <div *ngIf="signup" class="text-center">
-        Do have an account?
-        <a href="#" (click)="changeToSignup()">Login</a>
-      </div>
+    <div *ngIf="!signup" class="text-center">
+      Don't have an account?
+      <a href="#" (click)="changeToSignup()">Sign up</a>
+    </div>
+    <div *ngIf="signup" class="text-center">
+      Do have an account?
+      <a href="#" (click)="changeToSignup()">Login</a>
+    </div>
   </div>
 </div>

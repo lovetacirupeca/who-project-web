@@ -30,6 +30,7 @@ export class LoginComponent implements OnInit {
         this.router.navigate(['']);
       },
       (error) => {
+        console.log(error);
         this.apiError = error.message;
       }
     );
@@ -40,6 +41,7 @@ export class LoginComponent implements OnInit {
       (user) => {
         signupForm.reset();
         this.onSubmitLogin(signupForm);
+        this.router.navigate(['']);
       },
       (error) => {
         this.apiError = error.message;
@@ -50,6 +52,4 @@ export class LoginComponent implements OnInit {
   changeToSignup() {
     this.signup = !this.signup;
   }
-
-
 }
