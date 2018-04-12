@@ -41,7 +41,7 @@ export class LoginComponent implements OnInit {
       (user) => {
         signupForm.reset();
         this.onSubmitLogin(signupForm);
-        this.router.navigate(['']);
+        this.router.navigate(['/login']);
       },
       (error) => {
         this.apiError = error.message;

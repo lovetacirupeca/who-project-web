@@ -35,7 +35,7 @@
         </button>
       </div>
       <div *ngIf="signup" class="form-actions">
-        <button type="submit" (click)="onSubmitSignup(loginForm)" class="btn btn-block btn-primary" [disabled]="!loginForm.valid">
+        <button type="submit" (click)="onSubmitSignup(loginForm)" (click)="changeToSignup()" class="btn btn-block btn-primary" [disabled]="!loginForm.valid">
           Sign up
         </button>
       </div>
