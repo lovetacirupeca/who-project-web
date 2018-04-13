@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: Avenir-Medium;
+  font-weight: 500;
+  src: url("/assets/fonts/Avenir-Book.otf") format("otf");
+}
+
+@font-face {
+  font-family: Avenir-Heavy;
+  font-weight: 700;
+  src: url("/assets/fonts/Avenir-Heavy.otf") format("otf");
+}
+
