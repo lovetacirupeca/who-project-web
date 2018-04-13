@@ -43,6 +43,13 @@ export class SessionService extends BaseApiService {
     getUser(): User {
         return this.user;
     }
+    getUserInfo(): Observable<any> {
+        return this.http.get(`${SessionService.SESSION_API}/${this.user.id}`, BaseApiService.defaultOptions)
+            .map(res => {
+                return res.json()
+            })
+            .catch(error => this.handleError(error));
+    }
 
     onUserChanges(): Observable<User> {
         return this.userSubject.asObservable();
@@ -66,3 +73,4 @@ export class SessionService extends BaseApiService {
     }
 
 }
+
