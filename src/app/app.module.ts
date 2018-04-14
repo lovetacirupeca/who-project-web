@@ -14,6 +14,9 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './components/misc/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/misc/navbar/navbar.component';
+import { ContactCreateComponent } from './components/contact/contact-create/contact-create.component';
+import { ContactListComponent } from './components/contact/contact-list/contact-list.component';
+import { ContactItemComponent } from './components/contact/contact-item/contact-item.component';
 
 
 @NgModule({
@@ -21,7 +24,10 @@ import { NavbarComponent } from './components/misc/navbar/navbar.component';
     AppComponent,
     LoginComponent,
     HomeComponent,
-    NavbarComponent
+    NavbarComponent,
+    ContactCreateComponent,
+    ContactListComponent,
+    ContactItemComponent
   ],
   imports: [
     BrowserModule,
