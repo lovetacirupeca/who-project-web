@@ -1,39 +1,18 @@
-import { HomeComponent } from './components/home/home.component';
-// import { CanLeavePhoneCreateGuard } from './shared/guards/can-leave-phone-create.guard';
-// import { PhoneBaseComponent } from './components/phone/phone-base/phone-base.component';
-// import { PhoneCreateComponent } from './components/phone/phone-create/phone-create.component';
-// import { PhoneDetailsResolverGuard } from './shared/resolvers/phone-details-resolver.guard';
-// import { IsAuthenticatedGuard } from './shared/guards/is-authenticated.guard';
-// import { SignupComponent } from './components/misc/signup/signup.component';
-// import { LoginComponent } from './components/misc/login/login.component';
-// import { PhoneItemComponent } from './components/phone/phone-item/phone-item.component';
-// import { PhoneListComponent } from './components/phone/phone-list/phone-list.component';
 import { Routes } from '@angular/router';
+import { AppComponent } from './app.component';
+import { HomeComponent } from './components/home/home.component';
+import { ContactCreateComponent } from './components/contact/contact-create/contact-create.component';
+import { ContactListComponent } from './components/contact/contact-list/contact-list.component';
+import { ContactItemComponent } from './components/contact/contact-item/contact-item.component';
+import { EventCreateComponent } from './components/event/event-create/event-create.component';
+import { EventListComponent } from './components/event/event-list/event-list.component';
+import { IsAuthenticatedGuard } from './shared/guards/is-authenticated.guard';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
-    // { path: 'phones', canActivate: [IsAuthenticatedGuard], component: PhoneListComponent },
-    // {
-    //     path: 'phones',
-    //     canActivate: [IsAuthenticatedGuard],
-    //     component: PhoneBaseComponent,
-    //     children: [
-    //         {
-    //             path: 'new',
-    //             canActivate: [IsAuthenticatedGuard],
-    //             canDeactivate: [CanLeavePhoneCreateGuard],
-    //             component: PhoneCreateComponent
-    //         },
-    //         {
-    //             path: ':id',
-    //             canActivate: [IsAuthenticatedGuard],
-    //             resolve: {
-    //                 phone: PhoneDetailsResolverGuard
-    //             },
-    //             component: PhoneItemComponent
-    //         }
-    //     ]
-    // },
-    // { path: 'login', component: LoginComponent },
+    { path: 'create', canActivate: [IsAuthenticatedGuard], component: ContactCreateComponent },
+    { path: 'events/create', canActivate: [IsAuthenticatedGuard], component: EventCreateComponent },
+    { path: 'events/list', canActivate: [IsAuthenticatedGuard], component: EventListComponent },
+    // { path: 'login',  component: LoginComponent },
     // { path: 'signup', component: SignupComponent },
 ];

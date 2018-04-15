@@ -1,0 +1,47 @@
+<div class="row">
+  <div class="form col-xs-12 col-sm-4 col-sm-offset-4">
+
+    <form (ngSubmit)="onSubmitEvent(eventForm)" #eventForm="ngForm">
+      <div class="form-group" [class.has-error]="name.errors && name.touched">
+        <div class="form-group" [class.has-error]="name.errors && name.touched">
+          <div class="input-group">
+            <input type="text" name="name" class="form-control" placeholder="Name" [(ngModel)]="event.name" #name="ngModel" required>
+          </div>
+          <label class="control-label" *ngIf="name.errors && name.touched">
+            <ul>
+              <li *ngIf="name.errors.required">Required</li>
+            </ul>
+          </label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="input-group">
+          <input type="text" name="comments" class="form-control" placeholder="Comment" #comment>
+          <button class="plus" type="button" (click)="addComment(comment)">
+            Add
+          </button>
+        </div>
+      </div>
+
+      <div class="form-group" *ngFor="let comment of event.comments">
+        <div class="input-group">
+          <input type="text" name="comment" class="form-control" placeholder="Comment" [value]="comment" disabled>
+          <button class="remove" type="button" (click)="removeComment(comment)">
+            Remove
+          </button>
+        </div>
+      </div>
+
+      <div class="form-group" class="has-error" *ngIf="apiError">
+        <label class="control-label message">
+          {{ apiError }}
+        </label>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" (click)="onSubmitEvent(eventForm)" class="btn-block" [disabled]="!eventForm.valid">Create event</button>
+      </div>
+    </form>
+  </div>
+</div>

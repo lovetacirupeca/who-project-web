@@ -1,12 +1,12 @@
 .box {
   background: #f9f9f9;
   box-shadow: 0 0 1px rgba(0,0,0,.2);
-  margin-bottom: 10%;
 }
 
 nav a {
   font-family: "Avenir-Heavy", sans-serif;
   font-weight: 700;
+  color: #516077;
 }
 
 nav img {

@@ -1,6 +1,6 @@
 .container-btn {
 	text-align: center;
-    margin: 17% 0;
+    /*margin: 17% 0;*/
     font-family: "Avenir-Book", sans-serif;
 }
 
@@ -20,28 +20,28 @@
 
 /* color classes for .btn */
 .btn.blue {
-    background-color: #7fb1bf;
-    box-shadow: 0 4px #74a3b0;
+    background-color: #64cafa;
+    box-shadow: 0 4px #d2effd;
 }
 .btn.blue:active {
-    box-shadow: 0 0 #74a3b0;
-    background-color: #709CA8;
+    box-shadow: 0 0 #d2effd;
+    background-color: #d2effd;
 }
 
 .btn.green {
-    background-color: #9abf7f;
-    box-shadow: 0px 4px #87a86f;
+    background-color: #65e39f;
+    box-shadow: 0px 4px #def6e9;
 }
 .btn.green:active {
-    box-shadow: 0 0 #87a86f;
-    background-color: #87a86f;
+    box-shadow: 0 0 #def6e9;
+    background-color: #def6e9;
 }
 
-.btn.red {
-    background-color: #fa5a5a;
-    box-shadow:0px 4px #E04342;
+.btn.orange {
+    background-color: #ffad8c;
+    box-shadow:0px 4px #ffe8de;
 }
-.btn.red:active {
-    box-shadow: 0 0 #ff4c4b;
-    background-color: #ff4c4b;
+.btn.orange:active {
+    box-shadow: 0 0 #ffe8de;
+    background-color: #ffe8de;
 }

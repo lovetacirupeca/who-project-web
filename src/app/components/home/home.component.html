@@ -1,5 +1,5 @@
-<div class="container-btn">
-  <a href="#" class="btn green">view events</a>
-  <a href="#" class="btn blue">add contacts</a>
-  <a href="#" class="btn red">add events</a>
+<div class="container-btn d-block">
+  <a [routerLink]="['/events/list']" class="btn blue">view events</a>
+  <a [routerLink]="['/create']" class="btn green">add contacts</a>
+  <a [routerLink]="['/events/create']" class="btn orange">add events</a>
 </div>
