@@ -26,7 +26,7 @@ export class EventService extends BaseApiService {
     }
 
     create(event: Event): Observable<Event> {
-        return this.http.post(EventService.EVENT_API, event, BaseApiService.defaultOptions)
+        return this.http.post(`${EventService.EVENT_API}/new`, event, BaseApiService.defaultOptions)
             .map((res: Response) => res.json())
             .catch(error => this.handleError(error));
     }
@@ -38,7 +38,7 @@ export class EventService extends BaseApiService {
     }
 
     delete(id: string): Observable<void> {
-        return this.http.delete(`${EventService.EVENT_API}/${id}`, BaseApiService.defaultOptions)
+        return this.http.delete(`${EventService.EVENT_API}/delete/${id}`, BaseApiService.defaultOptions)
             .map((res: Response) => res.json())
             .catch(error => this.handleError(error));
     }

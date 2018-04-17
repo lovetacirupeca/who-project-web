@@ -32,7 +32,7 @@ export class EventCreateComponent {
     this.eventService.create(this.event).subscribe(
       (event) => {
         eventForm.reset();
-        this.router.navigate(['event/list']);
+        this.router.navigate(['events']);
       },
       (error) => {
         this.apiError = error.message;

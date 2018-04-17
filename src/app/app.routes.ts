@@ -12,7 +12,7 @@ export const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'create', canActivate: [IsAuthenticatedGuard], component: ContactCreateComponent },
     { path: 'events/create', canActivate: [IsAuthenticatedGuard], component: EventCreateComponent },
-    { path: 'events/list', canActivate: [IsAuthenticatedGuard], component: EventListComponent },
+    { path: 'events', canActivate: [IsAuthenticatedGuard], component: EventListComponent },
     // { path: 'login',  component: LoginComponent },
     // { path: 'signup', component: SignupComponent },
 ];

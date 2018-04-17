@@ -1,3 +1,21 @@
-<p>
-  contact-list works!
-</p>
+<div *ngFor="let contacts of contacts">
+  <article class="post">
+    <a href="#" class="post-image">
+      <img [src]="contacts.image"/>
+    </a>
+    <div class="details">
+      <div class="actions">
+        <a href="#" class="btn btn-round">
+          <span class="fa fa-chevron-down"></span>
+        </a>
+      </div>
+      <h2>
+        <a href="#">{{ contacts.name }}</a>
+      </h2>
+      <p>{{ contacts.job }}</p>
+      <ul class="tags">
+        <li *ngFor="let categories of categories" class="btn btn-quaternary btn-caps"></li>
+        </ul>
+    </div>
+  </article>
+</div>

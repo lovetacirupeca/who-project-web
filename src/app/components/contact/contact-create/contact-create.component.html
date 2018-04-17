@@ -56,11 +56,9 @@
       <div class="form-group" *ngFor="let categorie of contact.categories">
         <div class="input-group">
           <input type="text" name="categorie" class="form-control" placeholder="Categorie" [value]="categorie" disabled>
-          <span class="input-group-btn">
             <button class="remove" type="button" (click)="removeCategorie(categorie)">
               Remove
             </button>
-          </span>
         </div>
       </div>
 
@@ -71,7 +69,7 @@
       </div>
 
       <div class="form-actions">
-        <button type="submit" (click)="onSubmitContact(contactForm)" class="btn-block" [disabled]="!contactForm.valid">Add Contact</button>
+        <button type="submit" class="btn-block" [disabled]="!contactForm.valid">Add Contact</button>
       </div>
     </form>
   </div>

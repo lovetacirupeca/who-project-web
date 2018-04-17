@@ -26,7 +26,8 @@ export class ContactsService extends BaseApiService {
     }
 
     create(contact: Contact): Observable<Contact> {
-        return this.http.post(ContactsService.CONTACTS_API, contact.asFormData(), BaseApiService.defaultOptions)
+        console.log(contact.name)
+        return this.http.post(`${ContactsService.CONTACTS_API}/new`, JSON.stringify(contact), BaseApiService.defaultOptions)
             .map((res: Response) => res.json())
             .catch(error => this.handleError(error));
     }

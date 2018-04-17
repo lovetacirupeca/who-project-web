@@ -48,18 +48,18 @@ export class ContactCreateComponent implements OnInit {
     const image = this.image.nativeElement;
     if (image.files && image.files[0]) {
       this.contact.image = image.files[0];
-      this.contactsService.create(this.contact)
-        .subscribe(
-          (contact) => {
-            contactForm.reset();
-            this.router.navigate(['']);
-          },
-          (error) => {
-            console.log(error);
-            this.apiError = error;
-          }
-        );
     }
+    this.contactsService.create(this.contact)
+      .subscribe(
+        (contact) => {
+          contactForm.reset();
+          this.router.navigate(['']);
+        },
+        (error) => {
+          console.log(error);
+          this.apiError = error;
+        }
+    );
   }
 
   
