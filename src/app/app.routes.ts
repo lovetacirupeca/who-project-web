@@ -1,4 +1,5 @@
-import { Routes } from '@angular/router';
+import { Component } from '@angular/core';
+import { Routes, CanActivate } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { ContactCreateComponent } from './components/contact/contact-create/contact-create.component';
@@ -6,6 +7,7 @@ import { ContactListComponent } from './components/contact/contact-list/contact-
 import { ContactItemComponent } from './components/contact/contact-item/contact-item.component';
 import { EventCreateComponent } from './components/event/event-create/event-create.component';
 import { EventListComponent } from './components/event/event-list/event-list.component';
+import { ProfileComponent } from './components/misc/profile/profile.component';
 import { IsAuthenticatedGuard } from './shared/guards/is-authenticated.guard';
 
 export const routes: Routes = [
@@ -13,6 +15,7 @@ export const routes: Routes = [
     { path: 'create', canActivate: [IsAuthenticatedGuard], component: ContactCreateComponent },
     { path: 'events/create', canActivate: [IsAuthenticatedGuard], component: EventCreateComponent },
     { path: 'events', canActivate: [IsAuthenticatedGuard], component: EventListComponent },
+    { path: 'profile', canActivate: [IsAuthenticatedGuard], component: ProfileComponent },
     // { path: 'login',  component: LoginComponent },
     // { path: 'signup', component: SignupComponent },
 ];

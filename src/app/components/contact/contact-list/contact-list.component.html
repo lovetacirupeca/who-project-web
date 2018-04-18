@@ -1,7 +1,10 @@
-<div *ngFor="let contacts of contacts">
+<input type="text" [(ngModel)]="term" name="term" />
+
+
+<div *ngFor="let contact of contacts | search:'categories':term">
   <article class="post">
     <a href="#" class="post-image">
-      <img [src]="contacts.image"/>
+      <img [src]="contact.image"/>
     </a>
     <div class="details">
       <div class="actions">
@@ -10,11 +13,13 @@
         </a>
       </div>
       <h2>
-        <a href="#">{{ contacts.name }}</a>
+        <a href="#">{{ contact.name }}</a>
       </h2>
-      <p>{{ contacts.job }}</p>
+      <p>{{ contact.job }}</p>
       <ul class="tags">
-        <li *ngFor="let categories of categories" class="btn btn-quaternary btn-caps"></li>
+        <li *ngFor="let category of contact.categories" class="btn btn-quaternary btn-caps">
+           {{ category }}
+        </li>
         </ul>
     </div>
   </article>

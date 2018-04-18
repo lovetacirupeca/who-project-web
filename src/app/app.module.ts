@@ -24,6 +24,8 @@ import { ContactListComponent } from './components/contact/contact-list/contact-
 import { ContactItemComponent } from './components/contact/contact-item/contact-item.component';
 import { EventCreateComponent } from './components/event/event-create/event-create.component';
 import { EventListComponent } from './components/event/event-list/event-list.component';
+import { ProfileComponent } from './components/misc/profile/profile.component';
+import { SearchPipe } from './pipes/search.pipe';
 
 
 @NgModule({
@@ -36,7 +38,9 @@ import { EventListComponent } from './components/event/event-list/event-list.com
     ContactListComponent,
     ContactItemComponent,
     EventCreateComponent,
-    EventListComponent
+    EventListComponent,
+    ProfileComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,

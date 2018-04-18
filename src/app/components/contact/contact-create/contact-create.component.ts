@@ -34,14 +34,14 @@ export class ContactCreateComponent implements OnInit {
     this.contact.notes = this.contact.notes.filter(s => s !== note);
   }
 
-  addCategorie(categorie: HTMLInputElement) {
-    if (categorie.value) {
-      this.contact.categories.push(categorie.value);
-      categorie.value = '';
+  addCategory(category: HTMLInputElement) {
+    if (category.value) {
+      this.contact.categories.push(category.value);
+      category.value = '';
     }
   }
-  removeCategorie(categorie: string) {
-    this.contact.categories = this.contact.categories.filter(s => s !== categorie);
+  removeCategory(category: string) {
+    this.contact.categories = this.contact.categories.filter(s => s !== category);
   }
 
   onSubmitContact(contactForm: NgForm) {
