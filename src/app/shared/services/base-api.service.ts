@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class BaseApiService {
-    protected static readonly BASE_API = environment.BASE_API;
+    protected static readonly BASE_API = environment.baseApi;
     protected static defaultHeaders: Headers = new Headers({ 'Content-Type': 'application/json' });
     protected static defaultOptions: RequestOptions = new RequestOptions({ headers: BaseApiService.defaultHeaders, withCredentials: true });
 
