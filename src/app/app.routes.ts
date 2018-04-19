@@ -13,9 +13,8 @@ import { IsAuthenticatedGuard } from './shared/guards/is-authenticated.guard';
 export const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'create', canActivate: [IsAuthenticatedGuard], component: ContactCreateComponent },
+    { path: 'contact/:id', canActivate: [IsAuthenticatedGuard], component: ContactItemComponent },
     { path: 'events/create', canActivate: [IsAuthenticatedGuard], component: EventCreateComponent },
     { path: 'events', canActivate: [IsAuthenticatedGuard], component: EventListComponent },
     { path: 'profile', canActivate: [IsAuthenticatedGuard], component: ProfileComponent },
-    // { path: 'login',  component: LoginComponent },
-    // { path: 'signup', component: SignupComponent },
 ];

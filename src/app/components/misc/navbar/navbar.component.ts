@@ -1,7 +1,8 @@
 import { Observable, Subscription } from 'rxjs/Rx';
 import { Component, OnInit } from '@angular/core';
-import { User } from './../../../shared/model/user.model';
 import { SessionService } from './../../../shared/services/session.service';
+import { UsersService } from './../../../shared/services/users.service';
+import { User } from './../../../shared/model/user.model';
 import { Router } from '@angular/router';
 
 @Component({
@@ -11,6 +12,7 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
   user: User = new User();
+  userSubscription: Subscription;
 
   constructor(
     private sessionService: SessionService,

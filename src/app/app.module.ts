@@ -2,7 +2,7 @@ import { GlobalErrorHandlerService } from './shared/services/global-error-handle
 import { IsAuthenticatedGuard } from './shared/guards/is-authenticated.guard';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, ErrorHandler } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { RouterModule, ActivatedRoute } from '@angular/router';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 

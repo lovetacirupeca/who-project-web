@@ -19,5 +19,4 @@ export class ContactListComponent implements OnInit {
     this.contactsService.list()
       .subscribe((contacts) => this.contacts = contacts);
   }
-
 }

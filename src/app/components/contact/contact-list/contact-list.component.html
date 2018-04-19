@@ -3,17 +3,17 @@
 
 <div *ngFor="let contact of contacts | search:'categories':term">
   <article class="post">
-    <a href="#" class="post-image">
+    <a [routerLink]="['/contact', contact.id]" class="post-image">
       <img [src]="contact.image"/>
     </a>
     <div class="details">
       <div class="actions">
-        <a href="#" class="btn btn-round">
+        <a [routerLink]="['/contact', contact.id]" class="btn btn-round">
           <span class="fa fa-chevron-down"></span>
         </a>
       </div>
       <h2>
-        <a href="#">{{ contact.name }}</a>
+        <a [routerLink]="['/contact', contact.id]">{{ contact.name }}</a>
       </h2>
       <p>{{ contact.job }}</p>
       <ul class="tags">

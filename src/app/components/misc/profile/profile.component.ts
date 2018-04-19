@@ -2,7 +2,7 @@ import { Router } from '@angular/router';
 import { SessionService } from './../../../shared/services/session.service';
 import { UsersService } from './../../../shared/services/users.service';
 import { User } from './../../../shared/model/user.model';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -32,7 +32,7 @@ export class ProfileComponent implements OnInit {
   onClickLogout() {
     this.sessionService.logout()
       .subscribe(() => {
-        this.router.navigate(['']);
+        this.router.navigate(['/']);
       });
     }
 }

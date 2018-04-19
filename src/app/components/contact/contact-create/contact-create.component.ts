@@ -12,7 +12,7 @@ import { NgForm } from '@angular/forms';
 export class ContactCreateComponent implements OnInit {
   contact: Contact = new Contact();
   apiError: string;
-  @ViewChild('image') image;
+  @ViewChild('imageFile') imageFile;
   @ViewChild('contactForm') contactForm;
 
 
@@ -45,9 +45,9 @@ export class ContactCreateComponent implements OnInit {
   }
 
   onSubmitContact(contactForm: NgForm) {
-    const image = this.image.nativeElement;
-    if (image.files && image.files[0]) {
-      this.contact.image = image.files[0];
+    const imageFile = this.imageFile.nativeElement;
+    if (imageFile.files && imageFile.files[0]) {
+      this.contact.image = imageFile.files[0];
     }
     this.contactsService.create(this.contact)
       .subscribe(
