@@ -1,0 +1,98 @@
+.container-btn {
+	text-align: center;
+  font-family: "Avenir-Book", sans-serif;
+}
+.btn {
+    border-radius: 0;
+	position: relative;
+	border: 0;
+	padding: 5% 3.5%;
+	display: inline-block;
+	text-align: center;
+    color: white;
+}
+.btn:active {
+	top: 2%;	
+}
+.btn.orange {
+    background-color: #ffad8c;
+    box-shadow:0px 4px #ffe8de;
+}
+.btn.orange:active {
+    box-shadow: 0 0 #ffe8de;
+    background-color: #ffe8de;
+}
+
+/* END BUTTON NAV*/
+
+button::-moz-focus-inner {
+  border:0;
+  padding:0
+}
+button {
+  width:auto;
+  border:0 none;
+  margin:0;
+  padding:0;
+  background:transparent;
+  overflow:visible;
+  font:14px "Avenir-Heavy", sans-serif;
+}
+
+button {
+  float:left;
+  height:18px;
+  line-height:18px;
+  display:block;
+  color: #516077;
+  background-color: #D2EFFD;
+  width:25%;
+  transition: color 0.3s ease;
+}
+
+button:last-child {
+  margin-left:50%;
+}
+
+button a {
+  width:19px;
+  height:18px;
+  display:block;
+  float:left;
+}
+
+.popup {
+  margin: 2% auto;
+  width:320px;
+
+}
+
+h1 {
+  box-sizing:border-box;
+  padding:5% 10%;
+  font-family: "Avenir-Medium", sans-serif;
+  color: #516077;
+  font-size:18px;
+}
+
+p {
+  box-sizing:border-box;
+  padding: 0 10%;
+  font-family: "Avenir-Light", sans-serif;
+  color: #a6b0bc;
+  font-size:15px;
+}
+
+.stroke {
+  height:5px;
+  background: #64cafa;
+}
+
+.lower {
+  box-sizing: border-box;
+  background-color: #D2EFFD;
+  height:60px;
+  width:100%;
+  padding: 6% 15%;
+  color: #a6b0bc
+}

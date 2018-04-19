@@ -1,0 +1,61 @@
+.login-page {
+  width: 100%;
+  padding: 8% 0 0;
+  margin: auto;
+}
+
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 100%;
+  margin: 0 auto 10%;
+  padding: 5%;
+  text-align: center;
+}
+.form input {
+  font-family: "Avenir-Medium", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 5%;
+  padding: 5%;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form button {
+  font-family: "Avenir-Medium", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #4CAF50;
+  width: 100%;
+  border: 0;
+  padding: 5%;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form button:hover,.form button:active,.form button:focus {
+  background: #43A047;
+}
+
+.message {
+    font-family: "Avenir-Medium", sans-serif;
+    color: #b3b3b3;
+    font-size: 12px;
+}
+.message a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+.message li {
+  list-style-type: none;
+  font-family: "Avenir", sans-serif;
+    color: #b3b3b3;
+    font-size: 12px;
+    text-align: left !important;
+}

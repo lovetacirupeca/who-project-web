@@ -5,5 +5,5 @@
 
 export const environment = {
   production: false,
-  baseApi: 'https://whois-ironhack.herokuapp.com'
+  BASE_API: 'http://localhost:3000'
 };

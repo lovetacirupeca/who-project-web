@@ -1,0 +1,68 @@
+.form {
+  position: relative;
+  background: #FFFFFF;
+  max-width: 90%;
+  margin: 0 auto 10%;
+  padding: 5%;
+  text-align: center;
+}
+
+input {
+  font-family: "Avenir-Medium", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 3%;
+  padding: 5%;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+form .plus{
+  font-family: "Avenir-Medium", sans-serif;
+  background-color: #FFE8DE;
+  box-shadow: 0 4px #FFAD8C;
+  align-items: center;
+  width: 100% ;
+  border: 0 !important;
+  padding: 2% 8%;
+  color: #FFFFFF;
+  font-size: 14px;
+  cursor: pointer;
+}
+form .plus:active {
+  background: #FFAD8C;
+}
+
+form button {
+  font-family: "Avenir-Medium", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background-color: #FFAD8C;
+  box-shadow: 0px 4px #FFE8DE;
+  width: 100%;
+  border: 0;
+  padding: 5%;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+form button:active {
+  background: #FFE8DE !important;
+}
+
+.message {
+    font-family: "Avenir-Medium", sans-serif;
+    color: #b3b3b3;
+    font-size: 12px;
+}
+.message li {
+  list-style-type: none;
+  font-family: "Avenir-Heavy", sans-serif;
+    color: #b3b3b3;
+    font-size: 12px;
+    text-align: left !important;
+}

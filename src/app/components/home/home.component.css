@@ -1,0 +1,47 @@
+.container-btn {
+	text-align: center;
+    /*margin: 17% 0;*/
+    font-family: "Avenir-Book", sans-serif;
+}
+
+/* default button style */
+.btn {
+    border-radius: 0;
+	position: relative;
+	border: 0;
+	padding: 5% 3.5%;
+	display: inline-block;
+	text-align: center;
+    color: white;
+}
+.btn:active {
+	top: 2%;	
+}
+
+/* color classes for .btn */
+.btn.blue {
+    background-color: #64cafa;
+    box-shadow: 0 4px #d2effd;
+}
+.btn.blue:active {
+    box-shadow: 0 0 #d2effd;
+    background-color: #d2effd;
+}
+
+.btn.green {
+    background-color: #65e39f;
+    box-shadow: 0px 4px #def6e9;
+}
+.btn.green:active {
+    box-shadow: 0 0 #def6e9;
+    background-color: #def6e9;
+}
+
+.btn.orange {
+    background-color: #ffad8c;
+    box-shadow:0px 4px #ffe8de;
+}
+.btn.orange:active {
+    box-shadow: 0 0 #ffe8de;
+    background-color: #ffe8de;
+}

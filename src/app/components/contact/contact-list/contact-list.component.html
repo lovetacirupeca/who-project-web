@@ -1,0 +1,26 @@
+<input type="text" [(ngModel)]="term" name="term" />
+
+
+<div *ngFor="let contact of contacts | search:'categories':term">
+  <article class="post">
+    <a [routerLink]="['/contact', contact.id]" class="post-image">
+      <img [src]="contact.image"/>
+    </a>
+    <div class="details">
+      <div class="actions">
+        <a [routerLink]="['/contact', contact.id]" class="btn btn-round">
+          <span class="fa fa-chevron-down"></span>
+        </a>
+      </div>
+      <h2>
+        <a [routerLink]="['/contact', contact.id]">{{ contact.name }}</a>
+      </h2>
+      <p>{{ contact.job }}</p>
+      <ul class="tags">
+        <li *ngFor="let category of contact.categories" class="btn btn-quaternary btn-caps">
+           {{ category }}
+        </li>
+        </ul>
+    </div>
+  </article>
+</div>

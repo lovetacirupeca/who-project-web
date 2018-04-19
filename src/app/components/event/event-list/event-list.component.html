@@ -1,0 +1,20 @@
+<div class="container-btn d-block">
+  <a [routerLink]="['/events/create']" class="btn orange">add events</a>
+</div>
+<input type="text" [(ngModel)]="term" name="term" />
+<div *ngFor="let event of event" class="popup">
+  <h1>{{ event.name }}</h1>
+  <p>{{ event.comments }}</p>
+   <a [routerLink]="['/contact', contact.id]" *ngFor="let contact of event.contacts">
+     {{contact.name}}
+   </a>
+  <div class="stroke"></div>
+  <div class="lower">
+    <button>
+      <a>edit</a>
+    </button>
+    <button (click)="onClickDelete(event.id)">
+      delete
+    </button>
+  </div>
+</div>
