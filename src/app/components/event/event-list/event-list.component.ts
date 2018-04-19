@@ -1,3 +1,4 @@
+import { Contact } from './../../../shared/model/contact.model';
 import { SessionService } from './../../../shared/services/session.service';
 import { EventService } from '../../../shared/services/event.service';
 import { Event } from './../../../shared/model/event.model';

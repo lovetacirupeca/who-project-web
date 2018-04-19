@@ -23,24 +23,6 @@ export class ContactItemComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    // this.routes
-    //   .data
-    //   .subscribe(data => {
-    //     this.contact = data['contact'];
-    //   });
-    
-    // this.routes
-    //   .data
-    //   .subscribe(data => {
-    //     this.contact = this.contactsService.get(contact.id)}
-    //   );
-    
-    // this.routes
-    // .params
-    //   .subscribe(params => {
-    //     this.contactsService.get(params['contact.id']).subscribe(contact => this.contact = contact);
-    //   });
-
     this.activatedRoute.params.subscribe((params: Params) => {
       if (params['id']) {
         this.id = params['id'];

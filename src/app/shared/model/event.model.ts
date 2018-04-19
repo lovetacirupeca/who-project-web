@@ -4,5 +4,5 @@ export class Event {
     location?: string;
     comments?: Array<string> = new Array();
     ownerId?: string;
-    contacts?: string;
+    contacts?: Array<string> = new Array();
 }

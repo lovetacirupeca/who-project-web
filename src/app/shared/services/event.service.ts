@@ -1,3 +1,4 @@
+import { Contact } from './../model/contact.model';
 import { BaseApiService } from './base-api.service';
 import { environment } from './../../../environments/environment';
 import { Injectable } from '@angular/core';
@@ -25,8 +26,12 @@ export class EventService extends BaseApiService {
             .catch(error => this.handleError(error));
     }
 
-    create(event: Event): Observable<Event> {
-        return this.http.post(`${EventService.EVENT_API}/new`, event, BaseApiService.defaultOptions)
+    create(event: Event, contactList: Array<Contact>): Observable<Event> {
+        const eventBody = {
+            ...event,
+            contacts: contactList.map(e => e.id),
+        }
+        return this.http.post(`${EventService.EVENT_API}/new`, eventBody, BaseApiService.defaultOptions)
             .map((res: Response) => res.json())
             .catch(error => this.handleError(error));
     }

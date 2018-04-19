@@ -2,6 +2,10 @@ article{
   align-content: center;
 }
 
+input{
+  background-color: #696969;
+}
+
 img {
   display: block;
   margin-left: auto;

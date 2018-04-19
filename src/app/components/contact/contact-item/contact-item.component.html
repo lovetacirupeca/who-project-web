@@ -18,6 +18,11 @@
           {{ category }}
         </li>
       </ul>
+      <ul class="tags">
+        <li *ngFor="let note of contact.notes" class="btn btn-quaternary btn-caps">
+          {{ note }}
+        </li>
+      </ul>
     </div>
   </article>
 </div>

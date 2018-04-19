@@ -33,6 +33,12 @@
         </div>
       </div>
 
+      <!-- <div>
+        <select placeholder="Contacts" [formControl]="contact" multiple>
+          <option *ngFor="let contact of contacts" [value]="contact.name">{{contact.name}}</option>
+        </select>
+      </div> -->
+
       <div class="form-group" class="has-error" *ngIf="apiError">
         <label class="control-label message">
           {{ apiError }}
@@ -43,5 +49,10 @@
         <button type="submit" class="btn-block" [disabled]="!eventForm.valid">Create event</button>
       </div>
     </form>
+      <select (change)="addContactToList($event)">
+        <option *ngFor="let contact of contacts" [ngValue]="contact.id">{{contact.name}}</option>
+      </select>
   </div>
 </div>
+
+<div *ngFor="let contact of contactList">{{contact.name}}</div>
