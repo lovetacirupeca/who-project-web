@@ -5,7 +5,7 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { RouterModule, ActivatedRoute } from '@angular/router';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
-
+import { FileUploadModule } from 'ng2-file-upload';
 import './rxjs.operators';
 
 import { SessionService } from './shared/services/session.service';
@@ -46,7 +46,8 @@ import { SearchPipe } from './pipes/search.pipe';
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    FileUploadModule,
   ],
   providers: [
     SessionService,

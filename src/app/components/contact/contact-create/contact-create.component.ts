@@ -1,8 +1,10 @@
+import { environment } from './../../../../environments/environment';
 import { ContactsService } from './../../../shared/services/contacts.service';
 import { Contact } from './../../../shared/model/contact.model';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
+import { FileUploader } from "ng2-file-upload";
 
 @Component({
   selector: 'app-contact-create',
@@ -12,6 +14,8 @@ import { NgForm } from '@angular/forms';
 export class ContactCreateComponent implements OnInit {
   contact: Contact = new Contact();
   apiError: string;
+  uploader: FileUploader;
+
   @ViewChild('imageFile') imageFile;
   @ViewChild('contactForm') contactForm;
 
@@ -22,6 +26,9 @@ export class ContactCreateComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.uploader = new FileUploader({
+      url: `${environment.BASE_API}/contact/new`
+    });
   }
 
   addNote(note: HTMLInputElement) {
@@ -45,21 +52,29 @@ export class ContactCreateComponent implements OnInit {
   }
 
   onSubmitContact(contactForm: NgForm) {
-    const imageFile = this.imageFile.nativeElement;
-    if (imageFile.files && imageFile.files[0]) {
-      this.contact.image = imageFile.files[0];
+
+    if(this.contact.image) {      
+      this.uploader.onBuildItemForm = (item, form) => {
+        form.append('name', this.contact.name);
+        form.append('job', this.contact.job);
+        form.append('notes', this.contact.notes);
+        form.append('categories', this.contact.categories);
+      };
+      this.uploader.uploadAll();
+      setTimeout(() => this.router.navigate(['']), 2500);
+    } else {
+      this.contactsService.create(this.contact)
+        .subscribe(
+          (contact) => {
+            contactForm.reset();
+            this.router.navigate(['']);
+          },
+          (error) => {
+            console.log(error);
+            this.apiError = error;
+          }
+      );
     }
-    this.contactsService.create(this.contact)
-      .subscribe(
-        (contact) => {
-          contactForm.reset();
-          this.router.navigate(['']);
-        },
-        (error) => {
-          console.log(error);
-          this.apiError = error;
-        }
-    );
   }
 
   
