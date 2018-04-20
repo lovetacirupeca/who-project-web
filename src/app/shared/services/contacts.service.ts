@@ -33,7 +33,7 @@ export class ContactsService extends BaseApiService {
     }
 
     edit(contact: Contact): Observable<Contact> {
-        return this.http.put(`ContactsService.CONTACTS_API/${contact.id}`, contact.asFormData(), BaseApiService.defaultOptions)
+        return this.http.put(`${ContactsService.CONTACTS_API}/edit/${contact.id}`, JSON.stringify(contact), BaseApiService.defaultOptions)
             .map((res: Response) => res.json())
             .catch(error => this.handleError(error));
     }

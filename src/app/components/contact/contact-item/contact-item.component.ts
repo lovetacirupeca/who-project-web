@@ -33,12 +33,10 @@ export class ContactItemComponent implements OnInit {
       }
     });
   }
-
-
-  onClickDelete() {
-      this.contactsService.delete(this.contact.id)
-        .subscribe(() => {
-          this.router.navigate(['']);
-        })
-  }
+  // onClickDelete() {
+  //     this.contactsService.delete(this.contact.id)
+  //       .subscribe(() => {
+  //         this.router.navigate(['']);
+  //       })
+  // }
 }
