@@ -37,7 +37,7 @@ export class EventService extends BaseApiService {
     }
 
     edit(event: Event): Observable<Event> {
-        return this.http.put(EventService.EVENT_API, event, BaseApiService.defaultOptions)
+        return this.http.put(`${EventService.EVENT_API}/edit/${event.id}`, event, BaseApiService.defaultOptions)
             .map((res: Response) => res.json())
             .catch(error => this.handleError(error));
     }
