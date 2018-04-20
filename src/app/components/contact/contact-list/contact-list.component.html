@@ -1,6 +1,5 @@
 <input type="text" [(ngModel)]="term" name="term" />
 
-
 <div *ngFor="let contact of contacts | search:'categories':term">
   <article class="post">
     <a [routerLink]="['/contact', contact.id]" class="post-image">
