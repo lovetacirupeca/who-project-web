@@ -52,8 +52,7 @@ export class ContactCreateComponent implements OnInit {
   }
 
   onSubmitContact(contactForm: NgForm) {
-
-    if(this.contact.image) {      
+    if(this.contact.image) {    
       this.uploader.onBuildItemForm = (item, form) => {
         form.append('name', this.contact.name);
         form.append('job', this.contact.job);
