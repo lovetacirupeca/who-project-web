@@ -65,16 +65,28 @@ export class ContactEditComponent implements OnInit {
   }
 
   onEditContact(contactForm: NgForm) {
-    if (false) {
-      this.uploader.onBuildItemForm = (item, form) => {
-        form.append('name', this.contact.name);
-        form.append('job', this.contact.job);
-        form.append('notes', this.contact.notes);
-        form.append('categories', this.contact.categories);
-      };
-      this.uploader.uploadAll();
-    } else {
-      this.contactsService.edit(this.contact)
+  //   if (false) {
+  //     this.uploader.onBuildItemForm = (item, form) => {
+  //       form.append('name', this.contact.name);
+  //       form.append('job', this.contact.job);
+  //       form.append('notes', this.contact.notes);
+  //       form.append('categories', this.contact.categories);
+  //     };
+  //     this.uploader.uploadAll();
+  //   } else {
+  //     this.contactsService.edit(this.contact)
+  //       .subscribe(
+  //         (contact) => {
+  //           contactForm.reset();
+  //           this.router.navigate(['']);
+  //         },
+  //         (error) => {
+  //           console.log(error);
+  //           this.apiError = error;
+  //         }
+  //       );
+  //   }
+    this.contactsService.edit(this.contact)
         .subscribe(
           (contact) => {
             contactForm.reset();
@@ -86,6 +98,5 @@ export class ContactEditComponent implements OnInit {
           }
         );
     }
-  }
 
 }

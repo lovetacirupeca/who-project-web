@@ -4,9 +4,6 @@
     <form (ngSubmit)="onEditContact(contactForm)" #contactForm="ngForm" enctype="multipart/form-datas">
       <div class="form-group" [class.has-error]="name.errors && name.touched">
         <div class="form-group" [class.has-error]="name.errors && name.touched">
-          <div class="input-group">
-            <input type="text" name="name" class="form-control" placeholder="Name" [(ngModel)]="contact.name" #name="ngModel" required>
-          </div>
           <label class="control-label" *ngIf="name.errors && name.touched">
             <ul>
               <li *ngIf="name.errors.required">Required</li>
