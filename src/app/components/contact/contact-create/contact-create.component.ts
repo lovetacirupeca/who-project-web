@@ -27,7 +27,7 @@ export class ContactCreateComponent implements OnInit {
 
   ngOnInit() {
     this.uploader = new FileUploader({
-      url: `${environment.BASE_API}/contact/new`
+      url: `${environment.baseApi}/contact/new`
     });
   }
 
