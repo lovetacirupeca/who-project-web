@@ -18,7 +18,6 @@ export const routes: Routes = [
     { path: 'contact/edit/:id', canActivate: [IsAuthenticatedGuard], component: ContactEditComponent },
     { path: 'events', canActivate: [IsAuthenticatedGuard], component: EventListComponent },
     { path: 'events/create', canActivate: [IsAuthenticatedGuard], component: EventCreateComponent },
-    { path: 'events/edit/:id', canActivate: [IsAuthenticatedGuard], component: ContactEditComponent },
     { path: 'profile', canActivate: [IsAuthenticatedGuard], component: ProfileComponent },
     
 ];

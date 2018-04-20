@@ -28,7 +28,6 @@ import { EventListComponent } from './components/event/event-list/event-list.com
 import { ProfileComponent } from './components/misc/profile/profile.component';
 import { SearchPipe } from './pipes/search.pipe';
 import { ContactEditComponent } from './components/contact/contact-edit/contact-edit.component';
-import { EventEditComponent } from './components/event/event-edit/event-edit.component';
 
 
 @NgModule({
@@ -45,7 +44,6 @@ import { EventEditComponent } from './components/event/event-edit/event-edit.com
     ProfileComponent,
     SearchPipe,
     ContactEditComponent,
-    EventEditComponent
   ],
   imports: [
     BrowserModule,

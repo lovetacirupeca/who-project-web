@@ -77,6 +77,7 @@ export class ContactEditComponent implements OnInit {
       this.contactsService.edit(this.contact)
         .subscribe(
           (contact) => {
+            contactForm.reset();
             this.router.navigate(['']);
           },
           (error) => {
