@@ -91,3 +91,9 @@ select {
   font-size: 14px;
   background-color: #eff0f2;
 }
+
+ul {
+  text-align: left;
+  text-decoration-style: dotted !important;
+  color: #b3b3b3;
+}

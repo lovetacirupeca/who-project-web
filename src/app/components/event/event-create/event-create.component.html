@@ -49,4 +49,10 @@
   </div>
 </div>
 
-<div *ngFor="let contact of contactList">{{contact.name}}</div>
+<ul>
+  <li *ngFor="let contact of contactList">
+    <a [routerLink]="['/contact', contact.id]">
+      {{contact.name}}
+    </a>
+  </li>
+</ul>
