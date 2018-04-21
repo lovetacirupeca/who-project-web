@@ -57,10 +57,10 @@
   bottom: 0;
   line-height: 50px;
   text-align: center;
-  background-color: #666666;
+  background-color: #000;
   color: #ffffff;
   font-size: 1.6em;
-  padding: 4%;
+  padding: 4% 5%;
 }
 
 ul {

@@ -1,19 +1,18 @@
-<div class="container-btn d-block">
-  <a [routerLink]="['/events/create']" class="btn orange">add events</a>
+<div id="buttons-container-1" class="clearfix container-btn d-block">
+  <a [routerLink]="['/create']" class="btn btn-blue">add contacts</a>
 </div>
-<div *ngFor="let event of event" class="popup">
+
+<figure *ngFor="let event of event" class="snip1423">
   <h1>{{ event.name }}</h1>
   <p>{{ event.comments }}</p>
-   <a [routerLink]="['/contact', contact.id]" *ngFor="let contact of event.contacts">
-     {{contact.name}}
-   </a>
-  <div class="stroke"></div>
-  <div class="lower">
-    <button>
-      <a>edit</a>
-    </button>
+  <ul>
+    <li *ngFor="let contact of event.contacts">
+      <a [routerLink]="['/contact', contact.id]">
+        {{contact.name}}
+      </a>
+  </li>
+  </ul>
     <button (click)="onClickDelete(event.id)">
-      delete
+      <i class="ion-close"></i>
     </button>
-  </div>
-</div>
+</figure>
