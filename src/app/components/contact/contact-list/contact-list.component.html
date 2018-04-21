@@ -1,6 +1,6 @@
 <input type="searchText" [(ngModel)]="searchText" name="searchText" />
 
-<div *ngFor="let contact of contacts | search:'categories':searchText">
+<!-- <div *ngFor="let contact of contacts | search:'categories':searchText">
   <article class="post">
     <a [routerLink]="['/contact', contact.id]" class="post-image">
       <img [src]="contact.image"/>
@@ -22,4 +22,30 @@
         </ul>
     </div>
   </article>
-</div>
+</div> -->
+
+  <figure *ngFor="let contact of contacts | search:'categories':searchText" class="snip1531">
+    <img [src]="contact.image" alt="sample17" />
+    <figcaption>
+      <h3>{{ contact.name }}</h3>
+      <p>{{ contact.job }}</p>
+      <ul class="tags">
+        <li *ngFor="let category of contact.categories" class="btn btn-quaternary btn-caps">
+          {{ category }}
+        </li>
+      </ul>
+      <div class="icons">
+        <a [routerLink]="['/contact', contact.id]">
+          <i class="ion-ios-plus-outline"></i>
+        </a>
+      </div>
+    </figcaption>
+  </figure>
+
+<script>
+  $(".hover").mouseleave(
+      function () {
+        $(this).removeClass("hover");
+      }
+    );
+</script>
