@@ -12,13 +12,9 @@
 	text-align: center;
     color: white;
 }
-.btn:active {
-	top: 2%;	
-}
-
-.btn.btn-blue{
+.btn.btn-grey{
     background-color: #fff;
-    color: #5090c5;
+    color: #b3b3b3;
 }
 
 /* END BUTTON NAV*/

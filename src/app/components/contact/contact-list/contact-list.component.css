@@ -1,6 +1,6 @@
 .snip1531 {
   position: relative;
-  display: inline-block;
+  display: block;
   overflow: hidden;
   margin: 0 0 0 8%;
   min-width: 230px;
@@ -132,4 +132,5 @@ input {
 
 btn {
   margin-right: 2%;
+  white-space: normal;
 }
