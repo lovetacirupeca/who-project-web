@@ -59,8 +59,12 @@
       <h1>Who is?</h1>
       Welcome,
       <br/>
-      <span class="app-subheading">
+      <span *ngIf="!signup" class="app-subheading">
         Login to enter.
+        <br/>Stalker.
+      </span>
+      <span *ngIf="signup" class="app-subheading">
+        Sign up to enter.
         <br/>Stalker.
       </span>
     </div>

@@ -99,6 +99,7 @@
 }
 .app-register > a {
   font-weight: 400;
+  color: #5090c5 !important;
 }
 input {
   font-size: 2.5vh;
@@ -115,26 +116,26 @@ input {
 
 .app-button {
   text-decoration: none;
-  color: #0F9EDE;
-  font-size: 4.8vh;
+  color: #5090c5 !important;
+  font-size: 3vh;
   padding: 0 6vh;
   bottom: 10vh;
   font-weight: 400;
+  background-color: rgba(255, 255, 255, 0);
+  border: rgba(255, 255, 255, 0)
 }
 
 .message {
-    font-family: "Avenir-Medium", sans-serif;
     color: #b3b3b3;
     font-size: 12px;
 }
 .message a {
-  color: #4CAF50;
+  color: #5090c5 !important;
   text-decoration: none;
 }
 
 .message li {
   list-style-type: none;
-  font-family: "Avenir", sans-serif;
     color: #b3b3b3;
     font-size: 12px;
     text-align: left !important;
@@ -142,4 +143,5 @@ input {
 
 .buttonlog {
   margin-top: 5vh;
+  color: #5090c5;
 }

@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@font-face {
+/* @font-face {
   font-family: Avenir-Book;
   font-weight: 200;
   src: url("/assets/fonts/Avenir-Book.otf") format("otf");
@@ -27,31 +27,5 @@
   font-family: Avenir-Roman;
   font-weight: 500;
   src: url("/assets/fonts/Avenir-Roman.otf") format("otf");
-}
-
-/* LOGO */
-
-.logo-w{
-    font-family: "Avenir-Heavy";
-    color: #64cafa;
-}
-.logo-h{
-    font-family: "Avenir-Heavy";
-    color: #65e39f;
-}
-.logo-o{
-    font-family: "Avenir-Heavy";
-    color: #ffad8c;
-}
-.logo-i{
-    font-family: "Avenir-Heavy";
-    color: #ff83b3;
-}
-.logo-s{
-    font-family: "Avenir-Heavy";
-    color: #c096fa;
-}
-.logo-question{
-    font-family: "Avenir-Heavy";
-    color: #ffdb66;
-}
+} */
+@import url('https://fonts.googleapis.com/css?family=Lato');
