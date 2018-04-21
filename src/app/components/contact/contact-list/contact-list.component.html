@@ -1,4 +1,4 @@
-<input type="searchText" [(ngModel)]="searchText" name="searchText" />
+<input type="searchText" [(ngModel)]="searchText" name="searchText" placeholder="Search" />
 
 
   <figure *ngFor="let contact of contacts | search:'categories':searchText" class="snip1531">
@@ -6,8 +6,8 @@
     <figcaption>
       <h3>{{ contact.name }}</h3>
       <p>{{ contact.job }}</p>
-      <ul class="tags">
-        <li *ngFor="let category of contact.categories" class="btn btn-quaternary btn-caps">
+      <ul>
+        <li *ngFor="let category of contact.categories" class="btn">
           {{ category }}
         </li>
       </ul>

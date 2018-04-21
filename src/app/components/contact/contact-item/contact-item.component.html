@@ -4,12 +4,12 @@
     <h3>{{ contact.name }}</h3>
     <p>{{ contact.job }}</p>
     <ul>
-      <li *ngFor="let note of contact.notes" class="btn btn-quaternary btn-caps">
+      <li *ngFor="let note of contact.notes">
         <p>{{ note }}</p>
       </li>
     </ul>
-    <ul class="tags">
-      <li *ngFor="let category of contact.categories" class="btn btn-quaternary btn-caps">
+    <ul>
+      <li *ngFor="let category of contact.categories" class="btn">
         {{ category }}
       </li>
     </ul>
