@@ -1,28 +1,20 @@
-<div *ngIf="contact">
-  <article class="post">
-    <a href="#" class="post-image">
-      <img [src]="contact.image" />
-    </a>
-    <div class="details">
-      <div class="actions">
-        <a href="#" class="btn btn-round">
-          <span class="fa fa-chevron-down"></span>
-        </a>
-      </div>
-      <h2>
-        <a>{{ contact.name }}</a>
-      </h2>
-      <p>{{ contact.job }}</p>
-      <ul class="tags">
-        <li *ngFor="let category of contact.categories" class="btn btn-quaternary btn-caps">
-          {{ category }}
-        </li>
-      </ul>
-      <ul class="tags">
-        <li *ngFor="let note of contact.notes" class="btn btn-quaternary btn-caps">
-          {{ note }}
-        </li>
-      </ul>
-    </div>
-  </article>
-</div>
+<figure *ngIf="contact" class="snip1423">
+  <img [src]="contact.image" alt="sample57" />
+  <figcaption>
+    <h3>{{ contact.name }}</h3>
+    <p>{{ contact.job }}</p>
+    <ul>
+      <li *ngFor="let note of contact.notes" class="btn btn-quaternary btn-caps">
+        <p>{{ note }}</p>
+      </li>
+    </ul>
+    <ul class="tags">
+      <li *ngFor="let category of contact.categories" class="btn btn-quaternary btn-caps">
+        {{ category }}
+      </li>
+    </ul>
+  </figcaption>
+  <a [routerLink]="['/contact/edit/', contact.id]">
+    <i class="ion-edit"></i>
+  </a>
+</figure>
