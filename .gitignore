@@ -8,6 +8,8 @@
 
 # dependencies
 /node_modules
+/node_modules/cached-path-relative
+/node_modules/randomatic
 
 # IDEs and editors
 /.idea
