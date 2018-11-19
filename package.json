@@ -45,6 +45,9 @@
     "protractor": "~5.1.2",
     "ts-node": "~4.1.0",
     "tslint": "~5.9.1",
-    "typescript": "~2.5.3"
+    "typescript": "~2.5.3",
+    "cached-path-relative": ">=1.0.2",
+    "randomatic": ">=3.0.0",
+    "hoek": ">=5.0.3"
   }
 }
